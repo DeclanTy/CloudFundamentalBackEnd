@@ -18,12 +18,11 @@ import com.bae.JavaProgramBackend.property.service.PropertyServiceDB;
 @RestController
 public class propertyController {
 	private PropertyServiceDB service;
-/*
-	public PropertyController(PropertyServiceDB service) {
+
+	public propertyController(PropertyServiceDB service) {
 		super();
 		this.service=service;
 	}
-	*/
 	@PostMapping("/create")//201
 	public ResponseEntity createProperty(@RequestBody Property property) {
 		Property created=this.service.createProperty(property);

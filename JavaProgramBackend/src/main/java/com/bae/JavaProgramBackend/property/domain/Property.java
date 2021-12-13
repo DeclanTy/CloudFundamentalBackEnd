@@ -78,7 +78,7 @@ public class Property {
 	//toString, using default presentation, id may not be needed at this stage.
 	@Override
 	public String toString() {
-		return "Property [address=" + address + ", gpsLocation=" + gpsLocation + ", location=" + location + ", price="
+		return "Property [address=" + address + ", gps_location=" + gpsLocation + ", location=" + location + ", price="
 				+ price + ", bedrooms=" + bedrooms + "]";
 	}
 	
