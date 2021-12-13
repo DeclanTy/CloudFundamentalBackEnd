@@ -3,11 +3,14 @@ package com.bae.JavaProgramBackend.property.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.bae.JavaProgramBackend.property.domain.Property;
 import com.bae.JavaProgramBackend.property.repo.PropertyRepo;
 
+@Service
 public class PropertyServiceDB {
+	
 private PropertyRepo repo;
 	
 	@Autowired
@@ -38,7 +41,7 @@ private PropertyRepo repo;
 		Property updated=this.repo.save(existing);
 		return updated;
 	}
-	public void removeCountry(Integer id) {
+	public void removeProperty(Integer id) {
 		this.repo.deleteById(id);
 	}
 }
