@@ -1,25 +1,48 @@
 package com.bae.JavaProgramBackend.property.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity 
 public class Property {
 	
 	//Created private variables
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
 	private String address;
 	private String gpsLocation;
 	private String location;
 	private Integer price;
 	private Integer bedrooms;
+
+
+	//Default constructor
+	public Property() {
+		super();
+	}
 	
 	//Constructor with all variables
-	public Property(String address, String gpsLocation, String location, Integer price, Integer bedrooms) {
+	public Property(Integer id, String address, String gpsLocation, String location, Integer price, Integer bedrooms) {
 		super();
+		this.id = id;
 		this.address = address;
 		this.gpsLocation = gpsLocation;
 		this.location = location;
 		this.price = price;
 		this.bedrooms = bedrooms;
 	}
-	
+
 	//Getters and setters, some may not be required in the finished application
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	public String getAddress() {
 		return address;
 	}
@@ -52,7 +75,7 @@ public class Property {
 	}
 
 	
-	//toString, using default presentation
+	//toString, using default presentation, id may not be needed at this stage.
 	@Override
 	public String toString() {
 		return "Property [address=" + address + ", gpsLocation=" + gpsLocation + ", location=" + location + ", price="
