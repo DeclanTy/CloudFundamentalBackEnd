@@ -13,7 +13,7 @@ public class Property {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String address;
-	private String gpsLocation;
+	private String gps_location;
 	private String location;
 	private Integer price;
 	private Integer bedrooms;
@@ -25,11 +25,20 @@ public class Property {
 	}
 	
 	//Constructor with all variables
-	public Property(Integer id, String address, String gpsLocation, String location, Integer price, Integer bedrooms) {
+	public Property(Integer id, String address, String gps_location, String location, Integer price, Integer bedrooms) {
 		super();
 		this.id = id;
 		this.address = address;
-		this.gpsLocation = gpsLocation;
+		this.gps_location = gps_location;
+		this.location = location;
+		this.price = price;
+		this.bedrooms = bedrooms;
+	}
+
+	public Property(String address, String gps_location, String location, Integer price, Integer bedrooms) {
+		super();
+		this.address = address;
+		this.gps_location = gps_location;
 		this.location = location;
 		this.price = price;
 		this.bedrooms = bedrooms;
@@ -49,11 +58,11 @@ public class Property {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public String getGpsLocation() {
-		return gpsLocation;
+	public String getgps_location() {
+		return gps_location;
 	}
-	public void setGpsLocation(String gpsLocation) {
-		this.gpsLocation = gpsLocation;
+	public void setgps_location(String gps_location) {
+		this.gps_location = gps_location;
 	}
 	public String getLocation() {
 		return location;
@@ -78,7 +87,7 @@ public class Property {
 	//toString, using default presentation, id may not be needed at this stage.
 	@Override
 	public String toString() {
-		return "Property [address=" + address + ", gpsLocation=" + gpsLocation + ", location=" + location + ", price="
+		return "Property [address=" + address + ", gps_Location=" + gps_location + ", location=" + location + ", price="
 				+ price + ", bedrooms=" + bedrooms + "]";
 	}
 	
