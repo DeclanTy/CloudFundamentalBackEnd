@@ -10,7 +10,7 @@ import com.bae.JavaProgramBackend.property.domain.Property;
 @Service
 public class PropertyService {
 	private List<Property> properties = new ArrayList<>();
-
+/*
 	public Property createProperty(Property property) {
 		properties.add(property);
 		Property created = this.properties.get(this.properties.size() - 1);
@@ -29,5 +29,6 @@ public class PropertyService {
 	public void removeProperty(Integer id,Property newProperty) {
 		this.properties.remove(id.intValue());
 	}
-
+*/
+	//unsed code with the junit
 }
