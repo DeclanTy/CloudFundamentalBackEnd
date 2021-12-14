@@ -34,8 +34,7 @@ private PropertyRepo repo;
 	public Property replaceProperty(Integer id,Property newProperty) {
 		Property existing=this.repo.getById(id);
 		existing.setAddress(newProperty.getAddress());
-		
-		existing.setGpsLocation(newProperty.getGpsLocation());
+		existing.setgps_location(newProperty.getgps_location());
 		existing.setLocation(newProperty.getLocation());
 		existing.setPrice(newProperty.getPrice());
 		existing.setBedrooms(newProperty.getBedrooms());
